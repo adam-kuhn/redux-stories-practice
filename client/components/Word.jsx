@@ -1,4 +1,7 @@
 import React from 'react'
+import {connect} from 'react-redux'
+
+import {delWord} from '../actions'
 
 class Word extends React.Component {
   constructor (props) {
@@ -7,13 +10,14 @@ class Word extends React.Component {
   }
  
   deleteWord(evt) {
-    console.log(evt.target.value)
+    const wordId = Number(evt.target.getAttribute('data-id'))
+    this.props.dispatch(delWord(wordId))
   }
   render () {
     return (
       <div>
       <p>{this.props.word}</p>
-      <button value={this.props.word} 
+      <button data-id={this.props.id} value={this.props.word} 
         onClick={this.deleteWord}>
         X
       </button>
@@ -22,4 +26,4 @@ class Word extends React.Component {
   }
 }
 
-export default Word
+export default connect()(Word)
