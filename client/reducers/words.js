@@ -1,5 +1,6 @@
 import {ADD_WORD} from '../actions'
 import {DEL_WORD} from '../actions'
+import {FILT_WORD} from '../actions'
 
 const words = (state = [], action) => {
   switch (action.type) {
@@ -14,6 +15,11 @@ const words = (state = [], action) => {
     case DEL_WORD:
     return state.filter(words => {
       return words.id !== action.id
+    })
+
+    case FILT_WORD:
+    return state.filter(words => {
+      return words.word.includes(action.letters)
     })
 
     default:

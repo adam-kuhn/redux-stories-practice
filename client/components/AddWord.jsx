@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import {addWord} from '../actions'
 
 function submitWord (e, dispatch) {
-  console.log(e.keyCode)
   // keyCode is the value of the keyboard
   // pressing enter is 13
   if (e.keyCode === 13) {

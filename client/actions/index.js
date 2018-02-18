@@ -1,5 +1,6 @@
 export const ADD_WORD = 'ADD_WORD'
 export const DEL_WORD = 'DEL_WORD'
+export const FILT_WORD = 'FILT_WORD'
 export const ADD_IMAGE = 'ADD_IMAGE'
 export const DEL_IMAGE = 'DEL_IMAGE'
 
@@ -18,6 +19,13 @@ export const delWord = (id) => {
   return {
     type: DEL_WORD,
     id 
+  }
+}
+
+export const filterWords = (letters) => {
+  return {
+    type: FILT_WORD,
+    letters
   }
 }
 
