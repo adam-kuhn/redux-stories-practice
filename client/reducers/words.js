@@ -17,10 +17,10 @@ const words = (state = [], action) => {
       return words.id !== action.id
     })
 
-    case FILT_WORD:
-    return state.filter(words => {
-      return words.word.includes(action.letters)
-    })
+    // case FILT_WORD:
+    // return state.filter(words => {
+    //   return words.word.includes(action.letters)
+    // })
 
     default:
       return state
