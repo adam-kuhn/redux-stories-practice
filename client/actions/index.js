@@ -1,5 +1,5 @@
+export const ADD_WORD = 'ADD_WORD'
 export const DEL_WORD = 'DEL_WORD'
-
 export const ADD_IMAGE = 'ADD_IMAGE'
 export const DEL_IMAGE = 'DEL_IMAGE'
 
@@ -9,7 +9,7 @@ let nextImg = 0
 
 export const addWord = (word) => {
   return {
-    type: 'ADD_WORD',
+    type: ADD_WORD,
     id: nextWordId++,
     word
   }

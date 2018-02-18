@@ -1,8 +1,9 @@
+import {ADD_WORD} from '../actions'
 import {DEL_WORD} from '../actions'
 
 const words = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_WORD':
+    case ADD_WORD:
       return [
         ...state,
         {
